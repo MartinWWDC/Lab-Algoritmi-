@@ -2,9 +2,13 @@ package main
 
 import "fmt"
 
+var counter int
+
 func main() {
-	arr := []int{1, 2, 5, 7, -2, 10, 9, 21, 3, 8}
+	counter = 0
+	arr := []int{1, 7, 2, 4, 21, 6, 8}
 	fmt.Println(largest(arr))
+	fmt.Println(counter)
 }
 func largest(numbers []int) int {
 	n := len(numbers)
@@ -14,9 +18,11 @@ func largest(numbers []int) int {
 	return max(numbers[n-1], largest(numbers[:n-1]))
 }
 func max(x int, y int) int {
+	counter++
 	if x > y {
 		return x
 	} else {
 		return y
 	}
+
 }

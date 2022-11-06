@@ -1,0 +1,4 @@
+# Es 4
+la risposta correta è la  B in quanto nel caso in cui la lista sia bidirezionale allora l'aggiunta di un elemento sia in testa che in coda  dovrebbe richiedere lo stesso quantitativo di tempo, in quanto la testa è la coda vengono già fornite dalla  lista. 
+Mentre nel caso in cui la lista sia semplice l'aggiunta in testa risulterà meno onerosa in termini di risorse e di tempo rispetto all'aggiunta in coda: infatti nel primo caso l'aggiunta viene fatta usando l'indirizzo di testa fornito dalla lista mentre l'aggiunta in coda richiede di far scorrere tutta la lista per trovare quale sia l'ultimo elemento della lista.
+ 

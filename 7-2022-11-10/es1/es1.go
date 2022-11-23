@@ -16,14 +16,7 @@ type bitree struct {
 }
 
 func main() {
-	/*max_len := 8
-	arr := []int{}
-	for i := 0; i < max_len; i++ {
-		arr = append(arr, rand.Intn(10))
-	}
-	fmt.Println(arr)
-	*/
-	//arr := []int{69, 89, 28, 39, 66, 44, 12, 2, 71}
+	
 	arr := []int{5, 8, 2}
 
 	root := addElement(arr, 0)

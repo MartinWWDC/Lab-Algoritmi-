@@ -6,45 +6,6 @@ import (
 	"strings"
 )
 
-/*
-func main() {
-	content, err := ioutil.ReadFile("input.txt")
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Println(string(content))
-
-	arr := strings.Split(string(content), ",")
-	arr2 := []int{}
-	fmt.Println((arr))
-
-	for _, i := range arr {
-		j, _ := strconv.Atoi(i)
-		arr2 = append(arr2, j)
-	}
-	fmt.Println(arr2)
-	//arr2 := []int{3, 4, 3, 1, 2}
-	n := 256
-	for g := 0; g < n; g++ {
-		for i, el := range arr2 {
-			el--
-			if el == -1 {
-				el = 6
-				arr2 = append(arr2, 8)
-			}
-			arr2[i] = el
-
-		}
-		//fmt.Println("day ", g, " ", arr2)
-
-	}
-	//fmt.Println(arr2)
-	fmt.Println(len(arr2))
-
-}*/
-
 const MAX_DAY = 256
 const MAX_TIMER = 10
 const TIMER_AFTER_RESET = 6

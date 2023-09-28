@@ -1,0 +1,7 @@
+INPUT N ELEMENTI
+id item:nome cognome età
+id item:nome cognome età
+id item:nome cognome età
+relazione:id,id 
+relazione:id,id 
+relazione:id,id 

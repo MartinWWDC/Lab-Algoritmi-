@@ -9,6 +9,10 @@ import (
 )
 
 func main() {
+	//partOne()
+}
+
+func partOne(){
 	matr:=genMatr()
 	//toStringMatr(matr)
 

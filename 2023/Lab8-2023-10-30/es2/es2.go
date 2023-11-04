@@ -48,6 +48,28 @@ func f2(head *circNode,k int)int {
 	
 	return a
 }
+func f3(head *circNode,k int)int {
+	a:=0
+    if head == nil {
+        return 1
+    }
+
+    current := head
+    for {
+        current = current.next
+		if current == head {
+			break
+		}
+		if a==k{
+			fmt.Println(current.val)
+		}
+		a++
+		
+    }
+
+	
+	return a
+}
 
 
 func main() {

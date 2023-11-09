@@ -56,19 +56,20 @@ func f3(head *circNode,k int)int {
 
     current := head
     for {
-        current = current.next
-		if current == head {
-			break
-		}
+        current = current.prev
+		
 		if a==k{
 			fmt.Println(current.val)
+			break
 		}
 		a++
 		
     }
 
+//  T = 1 + n(1) = O(n)
 	
-	return a
+
+	return k
 }
 
 
@@ -94,6 +95,6 @@ func main() {
 	nodeMinus2.prev = node3
 
 	//printFromZero(node1)
-	f2(node1,1)
+	f3(node0,1)
 
 }

@@ -7,31 +7,31 @@ import (
 )
 
 type Stack interface{
-	Pop() int 
-	Push(i int)
+	Pop() any
+	Push(any)
 }
 
-type stackSlice []int
+type stackSlice []any
 
 func newStack() stackSlice {
-	return stackSlice([]int{})
+	return stackSlice([]any{})
 }
 
 // Effettua una Pop nella slice e ritorna il valore eliminato
-func (s *stackSlice) Pop() int {
+func (s *stackSlice) Pop() any {
 	n:=(*s)[len(*s)-1]
 	*s=(*s)[:len(*s)-1]
 	return n
 }
 
 // Effettua una Push nella slice
-func (s *stackSlice) Push(i int) {
+func (s *stackSlice) Push(i any) {
 	*s = append(*s, i)
 }
 
 
 // 1.1. Valutazione di un’espressione in notazione postfissa
-func valuta(espressione  string) int{
+func valuta(espressione  string) any{
 	var s Stack
 	pila := newStack()
 	s = &pila
@@ -55,15 +55,15 @@ func valuta(espressione  string) int{
 			// applica ad essi l'operatore e inserisci il risultato nella pila;
 			switch token {
 			case "+":
-				s.Push(n1+n2)
+				s.Push(n1.(int)+n2.(int))
 			case "-":
-				s.Push(n2-n1)
+				s.Push(n2.(int)-n1.(int))
 
 			case "*":
-				s.Push(n1*n2)
+				s.Push(n1.(int)*n2.(int))
 
 			case "/":
-				s.Push(n2/n1)
+				s.Push(n2.(int)/n1.(int))
 			}		
 		}
 		
@@ -78,6 +78,9 @@ func isOperatore(token string)bool{
 	return token=="+" ||token=="-" ||token=="*" ||token=="/"
 }
 
+// 1.2. Conversione da notazione infissa a notazione postfissa
+
+
 
 func main() {
 	// 1.1.
@@ -85,5 +88,5 @@ func main() {
 	fmt.Println(valuta(espressione1))
 
 	// 1.2
-	
+	// Puppatina al bomberazzo??	
 }

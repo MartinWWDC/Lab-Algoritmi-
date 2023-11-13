@@ -12,7 +12,7 @@ type bitreeNode struct {
 }
 type bitree struct {
 	root * bitreeNode
-	
+	tail * bitreeNode
 }
 
 func inorder ( node * bitreeNode ){
@@ -76,7 +76,7 @@ func stampaAlberoASommario ( node * bitreeNode , spaces int) {
 func main() {
 	//nums := generaSlice(8)
 	//fmt.Println(nums)
-	t := & bitree {nil}
+	t := & bitree {nil,nil}
 	t. root = & bitreeNode {nil, nil, 50}
 	t. root . left = newNode (20)
 	t. root . right = newNode (80)

@@ -12,4 +12,5 @@
    a) Parte 1 - il numero di orbite indirette
    b) Parte 2 - il numero di trasferimenti di orbita necessari
    Ragionare in termini di alberi vi aiuterà a impostare gli algoritmi risolutivi!
-4. 
+   1. dati due pianeti, uno di partenza e uno di arrivo,il numero di orbite indirette si può trovare facendo una ricerca ricorsiva sui padri fino al raggiungimento dell'elemento 
+   2. dati due nodi per i quale cercare il path si  parte da entrambi i nodi e si cerca ricorsiva per ogni nodo padre il proprio padre finchè non si trova un nodo comune tra i due

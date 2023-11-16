@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	sonsMap := make(map[string][]string)
@@ -8,4 +10,10 @@ func main() {
 	sonsMap["Gianni"] = []string{"Henry"}
 	sonsMap["Francesco"] = []string{"Irene"}
 
+	stampaSbordinati(sonsMap,"Anna")
+
+}
+
+func stampaSbordinati(sonsMap map[string][]string, key string) {
+	fmt.Println(sonsMap[key])
 }

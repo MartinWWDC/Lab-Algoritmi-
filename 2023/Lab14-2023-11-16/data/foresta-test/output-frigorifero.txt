@@ -1,0 +1,5 @@
+tazza (val = 2)
+frigorifero
+cassetto (val = 5)
+tavolo
+valigia (val = 3)

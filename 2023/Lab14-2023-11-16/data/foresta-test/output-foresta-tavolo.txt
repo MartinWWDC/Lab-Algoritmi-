@@ -1,0 +1,3 @@
+cassetto (val = 5)
+tavolo
+valigia (val = 3)

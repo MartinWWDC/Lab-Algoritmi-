@@ -42,29 +42,46 @@ func leggiInput() map[string]*oggetto {
 
 
 type foresta struct{
-	primoEl map[string]*oggetto
+	nodi map[string]*oggetto
 }
 
 
 func costruisciForesta(mappa map[string]*oggetto) foresta {
-	return foresta{}
+	return foresta{mappa}
 }
 
 func stampaAlbero(f foresta, name string) {
 
 }
 
-func sx(f foresta, n string) (string, bool) {
-	return "",false
-}
+func sx(f foresta,n string) (string, bool) {
+	oggetto, ok := f.nodi[n]
+	if !ok {
+	  return "", false
+	}
+	if oggetto.tipo == "num" {
+	  return "", false
+	}
+	return oggetto.dx, true
+  }
 
 func dx(f foresta, n string) (string, bool) {
-	return "",false
-
+	oggetto, ok := f.nodi[n]
+	if !ok {
+	  return "", false
+	}
+	return oggetto.sx, true
 }
 
 func up(f foresta, n string) (string, bool) {
-	return "",false
+	oggetto, ok := f.nodi[n]
+	if !ok {
+	  return "", false
+	}
+	if oggetto.tipo == "num" {
+	  return "", false
+	}
+	return string(oggetto.op), true
 }
 
 func calcolaPrezzo(f foresta, n string) int {
